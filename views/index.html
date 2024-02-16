@@ -4,7 +4,7 @@
 
     <form class="grid grid-cols-7 my-4 gap-4 items-start" hx-post="/add-note" hx-target="#note-list"
         hx-indicator="#loading" hx-swap="afterbegin" hx-on::after-request="this.reset()"
-        hx-headers='js:{"X-TimeZone": Intl.DateTimeFormat().resolvedOptions().timeZone}'>
+        hx-headers='js:{"X-TimeZone": Intl.DateTimeFormat().resolvedOptions().timeZone}' netlify>
         {{ block "new-note-form" . }}
         <div class="col-span-5 flex flex-col gap-4">
             <div class="flex flex-col gap-2">
